@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import EventCard from "./EventCard";
+import EventCard from "./EventCard"; 
 
 const EventList = () => {
   const [events, setEvents] = useState([]);
@@ -11,7 +11,7 @@ const EventList = () => {
         const adaptedEvents = data.map((user) => ({
           id: user.id,
           namaEvent: `Event oleh ${user.name}`,
-          tanggal: "2025-07-10", // Contoh tanggal statis
+          tanggal: "2025-07-10",
           lokasi: user.address.city,
           penyelenggara: user.company.name,
           deskripsi: `Hubungi ${user.email} untuk info lebih lanjut.`,
@@ -30,11 +30,12 @@ const EventList = () => {
   return (
     <div>
       {events.map((event) => (
-        <EventCard key={event.id} {...event} />
+        <EventCard key={event.id} {...event} /> // buat manggil komponen EventCard
       ))}
     </div>
   );
 };
 
 export default EventList;
+
 
