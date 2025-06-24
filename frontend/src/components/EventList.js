@@ -22,13 +22,13 @@ const EventList = () => {
 
   return (
     <div>
-      <input
-        type="text"
-        placeholder="Cari event..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        style={{ marginBottom: "1rem", padding: "0.5rem", width: "100%" }}
-      />
+     <input
+  type="text"
+  placeholder="Cari event..."
+  value={searchTerm}
+  onChange={(e) => setSearchTerm(e.target.value)}
+  className="search-box"
+/>
 
       {filteredEvents.map((event) => (
         <EventCard key={event.id} {...event} />
