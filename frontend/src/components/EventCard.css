@@ -1,0 +1,24 @@
+/* frontend/src/components/EventCard.css */
+.event-card {
+  border: 1px solid #ddd;
+  padding: 16px;
+  margin: 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #fff;
+  transition: transform 0.2s ease;
+}
+
+.event-card:hover {
+  transform: scale(1.02);
+}
+
+.event-title {
+  margin: 0 0 8px;
+  color: #2c3e50;
+}
+
+.event-description {
+  color: #555;
+  font-style: italic;
+}
