@@ -5,20 +5,17 @@ const EventList = () => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-  fetch("/data.json")
-    .then((res) => {
-      console.log("Response status:", res.status);
-      return res.json();
-    })
-    .then((data) => {
-      console.log("Data dari data.json:", data);
-      setEvents(data);
-    })
-    .catch((err) => {
-      console.error("Fetch gagal:", err);
-    });
-}, []);
-
+    fetch("/data.json")
+      .then((res) => {
+        console.log("Response status:", res.status);
+        return res.json();
+      })
+      .then((data) => {
+        console.log("Data dari data.json:", data);
+        setEvents(data);
+      })
+      .catch((err) => {
+        console.error("Fetch gagal:", err);
       });
   }, []);
 
@@ -29,7 +26,6 @@ const EventList = () => {
   return (
     <div>
       {events.map((event) => (
-        // buat manggil komponen EventCard
         <EventCard key={event.id} {...event} />
       ))}
     </div>
@@ -37,5 +33,6 @@ const EventList = () => {
 };
 
 export default EventList;
+
 
 
