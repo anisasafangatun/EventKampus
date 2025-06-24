@@ -5,7 +5,7 @@ import EventList from './components/EventList';
 function App() {
   return (
     <div className="App">
-      <h1 className="text-2xl font-bold p-4">Daftar Event Kampus</h1>
+      <h1 className="text-2xl font-bold p-4">Event Kampus Tirta Persada</h1>
       <EventList />
     </div>
   );

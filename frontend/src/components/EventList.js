@@ -1,29 +1,40 @@
-import React, { useState } from 'react';
-import eventData from '../data';
-import EventCard from './EventCard';
+import React, { useEffect, useState } from "react";
+import EventCard from "./EventCard";
 
 const EventList = () => {
-  const [events] = useState(eventData);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [events, setEvents] = useState([]);
 
-  const filteredEvents = events.filter(event =>
-    event.namaEvent.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((response) => response.json())
+      .then((data) => {
+        const adaptedEvents = data.map((user) => ({
+          id: user.id,
+          namaEvent: `Event oleh ${user.name}`,
+          tanggal: "2025-07-10", // Contoh tanggal statis
+          lokasi: user.address.city,
+          penyelenggara: user.company.name,
+          deskripsi: `Hubungi ${user.email} untuk info lebih lanjut.`,
+        }));
+        setEvents(adaptedEvents);
+      })
+      .catch((error) => {
+        console.error("Gagal mengambil data:", error);
+      });
+  }, []);
+
+  if (events.length === 0) {
+    return <p>Memuat data event...</p>;
+  }
 
   return (
-    <div className="p-4">
-      <input
-        type="text"
-        placeholder="Cari event..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        className="p-2 border rounded w-full mb-4"
-      />
-      {filteredEvents.map(event => (
-        <EventCard key={event.id} event={event} />
+    <div>
+      {events.map((event) => (
+        <EventCard key={event.id} {...event} />
       ))}
     </div>
   );
 };
 
 export default EventList;
+

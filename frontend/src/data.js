@@ -3,7 +3,7 @@ const eventData = [
     id: 1,
     namaEvent: "Seminar Teknologi 2025",
     tanggal: "2025-07-10",
-    lokasi: "Aula Utama Universitas XYZ",
+    lokasi: "Aula Utama Universitas Tirta Persada",
     penyelenggara: "Himpunan Mahasiswa Teknik Informatika",
     deskripsi: "Seminar yang membahas tren teknologi terbaru dan kecerdasan buatan."
   },
