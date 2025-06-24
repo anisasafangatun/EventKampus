@@ -5,21 +5,20 @@ const EventList = () => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    fetch("https://github.com/anisasafangatun/EventKampus")
-      .then((response) => response.json())
-      .then((data) => {
-        const adaptedEvents = data.map((user) => ({
-          id: user.id,
-          namaEvent: `Event oleh ${user.name}`,
-          tanggal: "2025-07-10",
-          lokasi: user.address.city,
-          penyelenggara: user.company.name,
-          deskripsi: `Hubungi ${user.email} untuk info lebih lanjut.`,
-        }));
-        setEvents(adaptedEvents);
-      })
-      .catch((error) => {
-        console.error("Gagal mengambil data:", error);
+  fetch("/data.json")
+    .then((res) => {
+      console.log("Response status:", res.status);
+      return res.json();
+    })
+    .then((data) => {
+      console.log("Data dari data.json:", data);
+      setEvents(data);
+    })
+    .catch((err) => {
+      console.error("Fetch gagal:", err);
+    });
+}, []);
+
       });
   }, []);
 
