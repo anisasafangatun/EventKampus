@@ -1,4 +1,3 @@
-// src/data.js
 const eventData = [
   {
     id: 1,

@@ -1,18 +1,14 @@
 // src/App.js
 import React from 'react';
-import EventCard from './components/EventCard';
-import eventData from './data';
+import EventList from './components/EventList';
 
 function App() {
   return (
-    <div>
-      <h1>Daftar Acara</h1>
-      {eventData.map((event) => (
-        <EventCard key={event.id} event={event} />
-      ))}
+    <div className="App">
+      <h1 className="text-2xl font-bold p-4">Daftar Event Kampus</h1>
+      <EventList />
     </div>
   );
 }
 
 export default App;
-
