@@ -5,7 +5,7 @@ const EventList = () => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
+    fetch("https://github.com/anisasafangatun/EventKampus")
       .then((response) => response.json())
       .then((data) => {
         const adaptedEvents = data.map((user) => ({
@@ -30,7 +30,8 @@ const EventList = () => {
   return (
     <div>
       {events.map((event) => (
-        <EventCard key={event.id} {...event} /> // buat manggil komponen EventCard
+        // buat manggil komponen EventCard
+        <EventCard key={event.id} {...event} />
       ))}
     </div>
   );
