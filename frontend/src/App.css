@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #e0c3fc, #8ec5fc, #f9c5d1);
+ background-image: url('/images/foto1.jfif');
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
   will-change: background-position;
