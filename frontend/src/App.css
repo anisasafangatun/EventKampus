@@ -1,24 +1,22 @@
 body {
   margin: 0;
+  font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #e0c3fc, #8ec5fc, #f9c5d1);
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
-  font-family: Arial, sans-serif;
+  will-change: background-position;
 }
 
 @keyframes gradientShift {
-  0% {
+  0%, 100% {
     background-position: 0% 50%;
   }
   50% {
     background-position: 100% 50%;
   }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
-.title {
+h1 {
   font-size: 28px;
   font-weight: 800;
   color: #8e44ad;
@@ -28,25 +26,12 @@ body {
   margin-bottom: 24px;
 }
 
-.App {
+.app-container {
+  background-color: #edcae1;
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #edcae1;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-  text-align: center;
-  font-size: 28px;
-  color: #8e44ad; /* Ungu */
-  margin-bottom: 24px;
-  border-bottom: 3px solid #8e44ad ; 
-  padding-bottom: 8px;
-}
-
-.app-container {
-  background-color: #f3c4e7;
   min-height: 100vh;
 }
