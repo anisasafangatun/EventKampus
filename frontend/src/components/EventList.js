@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import eventData from "../data";
 import EventCard from "./EventCard";
 import "./EventList.css";
 
@@ -7,6 +8,7 @@ const EventList = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
+    setEvents(eventData);
     fetch("/data.json")
       .then((res) => res.json())
       .then((data) => setEvents(data))
