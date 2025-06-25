@@ -1,19 +1,11 @@
 body {
   margin: 0;
+  background-color: #d5b5ca;
   font-family: Arial, sans-serif;
- background-image: url('/images/foto1.jfif');
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
   will-change: background-position;
-}
-
-@keyframes gradientShift {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
+  padding: auto;
 }
 
 h1 {
