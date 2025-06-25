@@ -25,7 +25,7 @@ const EventList = () => {
     <div
       className="event-list-container"
       style={{
-        backgroundImage: `url("/images/download1.jfif")`,
+        backgroundImage: `url("/images/gambar1.jfif")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         minHeight: "100vh",
