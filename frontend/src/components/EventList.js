@@ -22,23 +22,35 @@ const EventList = () => {
   }
 
   return (
-    <div
-      className="event-list-container"
-      style={{
-        backgroundImage: `url("/images/gambar1.jfif")`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        minHeight: "100vh",
-        padding: "2rem",
-      }}
-    >
-      <input
-        type="text"
-        placeholder="Cari event..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        className="search-box"
-      />
+  <div
+    style={{
+      backgroundImage: `url("/images/download1.jfif")`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      minHeight: "100vh",
+      padding: "2rem",
+    }}
+  >
+    <h1 style={{
+      textAlign: "center",
+      color: "#6a1b9a", // Ungu gelap
+      backgroundColor: "rgba(255, 255, 255, 0.6)",
+      borderRadius: "10px",
+      padding: "0.5rem",
+      fontWeight: "bold",
+      marginBottom: "1rem"
+    }}>
+      Event Kampus Tirta Persada
+    </h1>
+
+    <input
+      type="text"
+      placeholder="Cari event..."
+      value={searchTerm}
+      onChange={(e) => setSearchTerm(e.target.value)}
+      className="search-box"
+    />
+
 
       <div className="event-cards-wrapper">
         {filteredEvents.map((event) => (
