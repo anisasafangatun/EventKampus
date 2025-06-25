@@ -4,8 +4,7 @@ import EventList from './components/EventList';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Event Kampus Tirta Persada</h1>
+    <div className="app-container">
       <EventList />
     </div>
   );
