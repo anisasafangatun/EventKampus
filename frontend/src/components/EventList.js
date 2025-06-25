@@ -17,10 +17,6 @@ const EventList = () => {
     event.namaEvent.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  if (events.length === 0) {
-    return <p>Memuat data event...</p>;
-  }
-
   return (
     <div className="event-list-container">
       <h1 className="judul-event">Event Kampus Tirta Persada</h1>
@@ -34,9 +30,13 @@ const EventList = () => {
       />
 
       <div className="event-cards-wrapper">
-        {filteredEvents.map((event) => (
-          <EventCard key={event.id} {...event} />
-        ))}
+        {filteredEvents.length > 0 ? (
+          filteredEvents.map((event) => (
+            <EventCard key={event.id} {...event} />
+          ))
+        ) : (
+          <p className="no-event">Tidak ada event yang cocok.</p>
+        )}
       </div>
     </div>
   );
