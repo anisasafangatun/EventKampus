@@ -1,33 +1,35 @@
 import React, { useEffect, useState } from "react";
 import EventCard from "./EventCard";
+import "./EventList.css"; // pastikan file ini ada dan berisi styling
 
 const EventList = () => {
   const [events, setEvents] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    fetch("/data.json")
+    fetch("/data.json") // ambil dari folder 'public'
       .then((res) => res.json())
       .then((data) => setEvents(data))
       .catch((err) => console.error("Fetch gagal:", err));
   }, []);
 
   const filteredEvents = events.filter((event) =>
-    event.namaEvent.toLowerCase().includes(searchTerm.toLowerCase())
+    event.namaEvent?.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   if (events.length === 0) {
-    return <p>Memuat data event...</p>;
+    return <p style={{ padding: "2rem", color: "white" }}>Memuat data event...</p>;
   }
 
   return (
     <div
+      className="event-list-container"
       style={{
-        backgroundImage: `url(c:\Users\Arif Muamar\Downloads\download (1).jfif)`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        minHeight: '100vh',
-        padding: '2rem'
+        backgroundImage: `url("/images/download1.jfif")`
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        minHeight: "100vh",
+        padding: "2rem",
       }}
     >
       <input
@@ -38,12 +40,13 @@ const EventList = () => {
         className="search-box"
       />
 
-      {filteredEvents.map((event) => (
-        <EventCard key={event.id} {...event} />
-      ))}
+      <div className="event-cards-wrapper">
+        {filteredEvents.map((event) => (
+          <EventCard key={event.id} {...event} />
+        ))}
+      </div>
     </div>
   );
 };
 
 export default EventList;
-
