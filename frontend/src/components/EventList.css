@@ -1,7 +1,7 @@
 .event-list-container {
   background-size: cover;
   background-blend-mode: overlay;
-  background-image: url("images/download(1).jfif")
+  background-image: url("/images/download1.jfif");
   background-position: center;
   min-height: 100vh;
   padding: 2rem;

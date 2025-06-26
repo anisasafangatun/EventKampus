@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import eventData from '../data';
-import EventCard from './EventCard';
-import './EventList.css';
+import React, { useEffect, useState } from "react";
+import eventData from "../data";
+import EventCard from "./EventCard";
+import "./EventList.css";
 
 const EventList = () => {
   const [events, setEvents] = useState([]);
@@ -51,5 +51,7 @@ const EventList = () => {
     </div>
   );
 };
+
+
 
 export default EventList;
