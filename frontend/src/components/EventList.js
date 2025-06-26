@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import eventData from "../data";
-import EventCard from "./EventCard";
-import "./EventList.css";
+import React, { useEffect, useState } from 'react';
+import eventData from '../data';
+import EventCard from './EventCard';
+import './EventList.css';
 
 const EventList = () => {
   const [events, setEvents] = useState([]);
@@ -9,10 +9,18 @@ const EventList = () => {
 
   useEffect(() => {
     setEvents(eventData);
-    fetch("/data.json")
-      .then((res) => res.json())
-      .then((data) => setEvents(data))
-      .catch((err) => console.error("Fetch gagal:", err));
+     fetch("/data.json")
+      .then((res) => {
+        console.log("Response status:", res.status);
+        return res.json();
+      })
+      .then((data) => {
+        console.log("Data dari data.json:", data);
+        setEvents(data);
+      })
+      .catch((err) => {
+        console.error("Fetch gagal:", err);
+      }); 
   }, []);
 
   const filteredEvents = events.filter((event) =>
