@@ -1,25 +1,32 @@
 body {
-  margin: 0;
-  background-color: #d5b5ca;
-  font-family: Arial, sans-serif;
-  background-size: 400% 400%;
-  animation: gradientShift 15s ease infinite;
-  will-change: background-position;
-  padding: auto;
+  background-image: linear-gradient(to right, #131D4F, #295F98, #CDC2A5, #E1D7C6, #EAE4DD, #EAE4DD, #E1D7C6, #CDC2A5, #295F98, #131D4F);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  background-color: #131D4F;
 }
 
+
 h1 {
-  font-size: 28px;
-  font-weight: 800;
-  color: #8e44ad;
+  font-size: 30px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 800px;
+  width: 80%;
+  max-width: 500px;
+  margin: 20px auto;
+  text-decoration: #131D4F;
+  background-image: linear-gradient(to right, #131D4F, #295F98, #CDC2A5, #E1D7C6, #EAE4DD, #EAE4DD, #E1D7C6, #CDC2A5, #295F98, #131D4F);
   text-align: center;
-  border-bottom: 3px solid #e67e22;
-  padding-bottom: 8px;
+  border-bottom: 30px solid #131D4F;
+  border-width: 20px;
+  border-radius: 25px;
+  padding-bottom: 0.5px;
   margin-bottom: 24px;
 }
 
 .app-container {
-  background-color: #edcae1;
+  background-color: #131D4F;
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;

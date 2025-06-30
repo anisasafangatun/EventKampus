@@ -1,15 +1,15 @@
 .event-card {
-  background-color: white;
+  background-color: #EAE4DD;
   border-radius: 12px;
   padding: 1.5rem;
-  max-width: 800px;
-  width: 100%;
+  max-width: 500px;
+  width: 50%;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  border-left: 6px solid #7c4dff;
+  border-left: 6px solid #295F98;
 }
 
 .event-card h2 {
-  color: #7c4dff;
+  color: #295F98;
   margin-bottom: 0.5rem;
 }
 
@@ -18,5 +18,5 @@
 }
 
 .event-card p strong {
-  color: #ff5722;
+  color: #A16D28;
 }

@@ -27,21 +27,17 @@ const EventList = () => {
     event.namaEvent.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // style background image di sini
+  // ✅ Perbaikan deklarasi divStyle
   const divStyle = {
-    backgroundImage: `url(${require('../assets/images/gradasibg.jpg')})`,
-    backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
     minHeight: '100vh',
-    padding: '20px'
+    padding: '100px',
   };
 
   return (
     <div style={divStyle}>
-      <div className="event-list-container">
-        <h1 className="judul-event">Event Kampus Tirta Persada</h1>
-
+      <div className="event-container">
         <input
           type="text"
           placeholder="Cari event..."
@@ -60,6 +56,9 @@ const EventList = () => {
           )}
         </div>
       </div>
+      <footer className="footer">
+        <p>&copy; 2025 Universitas Tirta Persada. All rights reserved.</p>
+      </footer>
     </div>
   );
 };
