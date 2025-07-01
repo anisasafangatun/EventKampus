@@ -1,6 +1,4 @@
 body {
-  background-image: linear-gradient(to right, #131D4F, #295F98, #CDC2A5, #E1D7C6, #EAE4DD, #EAE4DD, #E1D7C6, #CDC2A5, #295F98, #131D4F);
-  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   min-height: 100vh;
@@ -11,26 +9,72 @@ body {
 h1 {
   font-size: 30px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: 800px;
+  font-weight: 800;
   width: 80%;
   max-width: 500px;
   margin: 20px auto;
-  text-decoration: #131D4F;
-  background-image: linear-gradient(to right, #131D4F, #295F98, #CDC2A5, #E1D7C6, #EAE4DD, #EAE4DD, #E1D7C6, #CDC2A5, #295F98, #131D4F);
+  text-decoration-color: #fbffff;
   text-align: center;
-  border-bottom: 30px solid #131D4F;
+  border-bottom: 30px solid #6fd3dd;
   border-width: 20px;
-  border-radius: 25px;
+  border-radius: 80px;
   padding-bottom: 0.5px;
   margin-bottom: 24px;
+  color: #fbffff;
 }
 
 .app-container {
-  background-color: #131D4F;
+  background-color: #4f5678;
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   min-height: 100vh;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* posisikan h1 ke tengah */
+  position: relative;
+  padding: 20px;
+}
+
+/* Logo tetap di pojok kiri */
+.logo-kampus {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 70px;    /* perbesar logo */
+  height: 70px;
+  object-fit: contain;
+}
+
+/* Judul tetap di tengah */
+.judul-kampus {
+  font-size: 80px;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+  text-align: center;
+}
+
+.judul-gradient {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(to right, #D4AF37, #3DC5B7); /* Emas ke hijau tosca */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+
+
+.AppContent {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }

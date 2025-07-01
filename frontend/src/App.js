@@ -3,21 +3,27 @@ import EventList from './components/EventList';
 import './App.css';
 
 const App = () => {
-  const style = { // Gambar dari folder public/images
-    backgroundSize: 'cover',
+  const divStyle = {
+    backgroundImage: "url('/images/pexels-irenelasus-88517.jpg')",
     backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
+    backgroundPosition: 'senter',
+    backgroundSize: 'cover',
     minHeight: '100vh',
     padding: '20px',
   };
-
   return (
-    <div className="App" style={style}>
-      <h1 className="text-2xl font-bold text-center my-4">Event Kampus Tirta Persada</h1>
-      <EventList />
+    <div style={divStyle}>
+      <header className="header">
+        <img src="/images/logo-removebg-preview.png" alt="logo" className="logo" />
+        <h1 className="judul-gradient">Event Kampus Tirta Persada</h1>
+
+      </header>
+
+      <div className="AppContent">
+        <EventList />
+      </div>
     </div>
   );
 };
 
 export default App;
-

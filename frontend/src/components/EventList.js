@@ -27,8 +27,9 @@ const EventList = () => {
     event.namaEvent.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // ✅ Perbaikan deklarasi divStyle
+  //  Perbaikan deklarasi divStyle
   const divStyle = {
+    backgroundImage: "url('/images2/laut.jpgg')",
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
     minHeight: '100vh',
